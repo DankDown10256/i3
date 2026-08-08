@@ -46,12 +46,20 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+default_border none
+default_floating_border none
+for_window [class=".*"] border none
+
+gaps inner 8
+gaps outer 4
+
+
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+q kill
